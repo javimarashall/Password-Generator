@@ -15,8 +15,17 @@ var minCharacters = 8;
 var maxCharacters = 128;
 
 var indexUpper = Math.floor(Math.random() * upperCaseLetters.length);
-console.log(indexUpper)
+var capitalArray = upperCaseLetters[indexUpper];
 
+var indexLower = Math.floor(Math.random() * lowerCaseLetters.length);
+var lowerArray = lowerCaseLetters[indexLower];
+
+var indexCharacter = Math.floor(Math.random() * specialCharacters.length);
+var characterArray = specialCharacters[indexCharacter]; 
+
+var indexNumber = Math.floor(Math.random() * numbers.length);
+var numberArray = numbers[indexNumber];
+console.log(numberArray)
 
 
 function  characterNumber() {
