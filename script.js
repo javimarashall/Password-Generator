@@ -27,10 +27,8 @@ var numberArray = numbers[indexNumber];
 var useUpper;
 var userInput;
 var useLower;
-var numbers;
-var specialCharacters;
-var userPassword;
-var useSelect;
+var userPassword = ""
+var userSelect;
 
 function characterNumber()  {
   userInput = prompt("Enter amount of characters between 8 and 128");
@@ -40,26 +38,33 @@ function characterNumber()  {
   }  else {
     var useUpper = confirm("Would you like capital letters?"); 
     var useLower = confirm("Would you like lower case letters?");
-    var numbers = confirm("Would you like to use numbers?");
-    var specialCharacters = confirm("Would you like special characters?")
+    var useNumbers = confirm("Would you like to use numbers?");
+    var useSpecialCharacters = confirm("Would you like special characters?")
 };
 
-if (useUpper && useLower && numbers && specialCharacters){
-  userSelect = upperCaseLetters.concat(lowerCaseLetters, specialCharacters, numbers); 
-}  else if (useLower && numbers && specialCharacters) {
+if (useUpper && useLower && useNumbers && useSpecialCharacters){
+  userSelect = upperCaseLetters.concat(lowerCaseLetters) 
+  userSelect = numbers.concat(specialCharacters);  
+} 
+ else if (useLower && useNumbers && useSpecialCharacters) {
   userSelect = lowerCaseLetters.concat(numbers, specialCharacters)
-} else if (useUpper && numbers && specialCharacters){
-  userSelect = capitalLetters.concat(numbers, speciaalCharacters);
-}  else if (useUpper && useLower && specialCharacters){
+} else if (useUpper && useNumbers && useSpecialCharacters){
+  userSelect = upperCaseLetters.concat(numbers, specialCharacters);
+}  else if (useUpper && useLower && useSpecialCharacters){
   userSelect = upperCaseLetters.concat(lowerCaseLetters, specialCharacters);
-} else if (useUpper && useLower && numbers) {
+} else if (useUpper && useLower && useNumbers) {
   userSelect = upperCaseLetters.concat(lowerCaseLetters, numbers);
 } else if (useUpper && useLower) {
-  userSelect = capitalLetters.concat(lowerCaseLetters);
+  userSelect = upperCaseLetters.concat(lowerCaseLetters);
+} else if (useUpper && useNumbers) {
+  userSelect = upperCaseLetters.concat(numbers);
+} else if (useUpper && useSpecialCharacters){
+  userSelect = upperCaseLetters.concat(useSpecialCharacters)
 }
+
 for (var i = 0; i < userInput; i++){
-   userPassword = userSelect[Math.floor(Math.random()) * userSelect.length];
-    console.log(userPassword)
+   userPassword = userPassword + userSelect[Math.floor(Math.random() * (userSelect.length))];
+   
   } 
 }
 characterNumber()
