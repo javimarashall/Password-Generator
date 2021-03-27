@@ -34,3 +34,9 @@ https://github.com/javimarashall/Password-Generator
 
 ## Deploy Link
 https://javimarashall.github.io/Password-Generator/
+
+## Peronal Links
+[Github](https://github.com/javimarashall)<br>
+[Linkedin](https://www.linkedin.com/in/javier-mondragon-7b471719b/)
+
+

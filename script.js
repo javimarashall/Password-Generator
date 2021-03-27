@@ -26,8 +26,7 @@ function characterNumber()  {
 };
 
 if (useUpper && useLower && useNumbers && useSpecialCharacters){
-  userSelect = upperCaseLetters.concat(lowerCaseLetters) 
-  userSelect = numbers.concat(specialCharacters);  
+  userSelect = upperCaseLetters.concat(lowerCaseLetters, numbers, specialCharacters);  
 } 
  else if (useLower && useNumbers && useSpecialCharacters) {
   userSelect = lowerCaseLetters.concat(numbers, specialCharacters)
