@@ -11,6 +11,9 @@
 ## Summary
 This application is used to generate a random password using certain criterias. Upon loading of the application, the user starts it by pressing the "generate password" button. Once the application is started, the user is prompted with a pop up windows asking the user how many characters to use. Next, the user is prompted with several questions asking if the user would like to use upper case letters, lower case letters, numbers or special characters. Depending on what the user selects as the criteria, that's what the application will use to generate the password. 
 
+## Screen Shot
+![Site](./assets/images/site.png)
+
 ## Code Snippet
 This code snippet represents the if else used to prompt the user for the specific criterias to be met for the password generator.
 
@@ -25,9 +28,6 @@ function characterNumber()  {<br>
     var useNumbers = confirm("Would you like to use numbers?");<br>
     var useSpecialCharacters = confirm("Would you like special characters?")<br>
 };<br>
-
-## Screen Shot
-![Site](./assets/images/site.png)
 
 ## Repository Link
 https://github.com/javimarashall/Password-Generator
