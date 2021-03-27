@@ -59,8 +59,23 @@ if (useUpper && useLower && useNumbers && useSpecialCharacters){
 } else if (useUpper && useNumbers) {
   userSelect = upperCaseLetters.concat(numbers);
 } else if (useUpper && useSpecialCharacters){
-  userSelect = upperCaseLetters.concat(useSpecialCharacters)
+  userSelect = upperCaseLetters.concat(specialCharacters);
+}  else if (useNumbers && useSpecialCharacters){
+    userSelect = numbers.concat(specialCharacters);    
+} else if (useLower && useNumbers){
+  userSelect = lowerCaseLetters.concat(numbers);
+} else if (useLower && useSpecialCharacters){
+  userSelect = lowerCaseLetters.concat(specialCharacters);
+} else if (useUpper){
+  userSelect = upperCaseLetters;
+} else if (useLower){
+  userSelect = lowerCaseLetters;
+} else if (useNumbers) {
+  userSelect = numbers;
+} else if (useSpecialCharacters){
+  userSelect = specialCharacters
 }
+
 
 for (var i = 0; i < userInput; i++){
    userPassword = userPassword + userSelect[Math.floor(Math.random() * (userSelect.length))];
