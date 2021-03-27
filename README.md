@@ -11,77 +11,26 @@
 ## Summary
 This application is used to generate a random password using certain criterias. Upon loading of the application, the user starts it by pressing the "generate password" button. Once the application is started, the user is prompted with a pop up windows asking the user how many characters to use. Next, the user is prompted with several questions asking if the user would like to use upper case letters, lower case letters, numbers or special characters. Depending on what the user selects as the criteria, that's what the application will use to generate the password. 
 
-```
-GIVEN I need a new, secure password
-WHEN I click the button to generate a password
-THEN I am presented with a series of prompts for password criteria
-WHEN prompted for password criteria
-THEN I select which criteria to include in the password
-WHEN prompted for the length of the password
-THEN I choose a length of at least 8 characters and no more than 128 characters
-WHEN prompted for character types to include in the password
-THEN I choose lowercase, uppercase, numeric, and/or special characters
-WHEN I answer each prompt
-THEN my input should be validated and at least one character type should be selected
-WHEN all prompts are answered
-THEN a password is generated that matches the selected criteria
-WHEN the password is generated
-THEN the password is either displayed in an alert or written to the page
-```
+## Code Snippet
+This code snippet represents the if else used to prompt the user for the specific criterias to be met for the password generator.
 
-## Mock-Up
+function characterNumber()  {<br>
+  userInput = prompt("Enter amount of characters between 8 and 128");<br>
+  if (userInput < minCharacters || userInput > maxCharacters) {  <br> 
+    alert("Password must be between 8 and 128 characters");<br>
+    characterNumber()<br>
+  }  else {<br>
+    var useUpper = confirm("Would you like capital letters?");<br> 
+    var useLower = confirm("Would you like lower case letters?");<br>
+    var useNumbers = confirm("Would you like to use numbers?");<br>
+    var useSpecialCharacters = confirm("Would you like special characters?")<br>
+};<br>
 
-The following image shows the web application's appearance and functionality:
+## Screen Shot
+![Site](./assets/images/site.png)
 
-![The Password Generator application displays a red button to "Generate Password".](./Assets/03-javascript-homework-demo.png)
+## Repository Link
+https://github.com/javimarashall/Password-Generator
 
-## Grading Requirements
-
-This homework is graded based on the following criteria: 
-
-### Technical Acceptance Criteria: 40%
-
-* Satisfies all of the preceding acceptance criteria plus the following:
-
-  * The homework should not produce any errors in the console when you inspect it using Chrome DevTools.
-
-### Deployment: 32%
-
-* Application deployed at live URL.
-
-* Application loads with no errors.
-
-* Application GitHub URL submitted.
-
-* GitHub repository that contains application code.
-
-### Application Quality: 15%
-
-* Application user experience is intuitive and easy to navigate.
-
-* Application user interface style is clean and polished.
-
-* Application resembles the mock-up functionality provided in the homework instructions.
-
-### Repository Quality: 13%
-
-* Repository has a unique name.
-
-* Repository follows best practices for file structure and naming conventions.
-
-* Repository follows best practices for class/id naming conventions, indentation, quality comments, etc.
-
-* Repository contains multiple descriptive commit messages.
-
-* Repository contains quality readme file with description, screenshot, and link to deployed application.
-
-## Review
-
-You are required to submit the following for review:
-
-* The URL of the deployed application.
-
-* The URL of the GitHub repository, with a unique name and a readme describing the project.
-
-- - -
-© 2021 Trilogy Education Services, LLC, a 2U, Inc. brand. Confidential and Proprietary. All Rights Reserved.
+## Deploy Link
+https://javimarashall.github.io/Password-Generator/

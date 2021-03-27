@@ -12,17 +12,17 @@ var minCharacters = 8;
 var maxCharacters = 128;
 
 
-var indexUpper = Math.floor(Math.random() * upperCaseLetters.length);
-var capitalArray = upperCaseLetters[indexUpper];
+// var indexUpper = Math.floor(Math.random() * upperCaseLetters.length);
+// var capitalArray = upperCaseLetters[indexUpper];
 
-var indexLower = Math.floor(Math.random() * lowerCaseLetters.length);
-var lowerArray = lowerCaseLetters[indexLower];
+// var indexLower = Math.floor(Math.random() * lowerCaseLetters.length);
+// var lowerArray = lowerCaseLetters[indexLower];
 
-var indexCharacter = Math.floor(Math.random() * specialCharacters.length);
-var characterArray = specialCharacters[indexCharacter]; 
+// var indexCharacter = Math.floor(Math.random() * specialCharacters.length);
+// var characterArray = specialCharacters[indexCharacter]; 
 
-var indexNumber = Math.floor(Math.random() * numbers.length);
-var numberArray = numbers[indexNumber];
+// var indexNumber = Math.floor(Math.random() * numbers.length);
+// var numberArray = numbers[indexNumber];
 
 var useUpper;
 var userInput;
